@@ -1,0 +1,111 @@
+.todo{
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  background-color: black;
+  background-image: url("/assets/Img/aboutFondo.webp");
+  background-attachment: fixed;
+  background-size: cover;
+}
+.titulo{
+  border: 1px solid transparent;
+  h1{
+    text-align: start;
+    font-size: 12vw;
+    color: white;
+  }
+}
+.description{
+  display: grid;
+  grid-template-columns:50% 50% ;
+  font-family: "Clarkson",Helvetica,sans-serif;
+  .img1{
+    margin-left: 10%;
+    img{
+      width: 35vw;
+      height: auto;
+      border-radius: 1vw;
+    }
+  }
+  .valid{
+    margin: 5%;
+    padding: 2%;
+    p{
+      opacity: 0.8;
+      color: white;
+      font-size: 2vw;
+    }
+    span{
+      color: lightpink;
+    }
+  }
+  #v1,#v2,#v3{
+    margin: 0%;
+    padding: 0%;
+    margin-right: 30%;
+  }
+  #v3{
+    height: 27vw;
+  }
+}
+.download{
+  text-align: center;
+  p{
+    color: white;
+    font-size: 6vw;
+  }
+}
+#end{
+  height: 15vw;
+  width: 20%;
+  margin: 0;
+  margin-left:auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 668px) {
+  .todo{
+    background-color: black;
+    background-image: url("/assets/Img/aboutFondoMobile.webp");
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .description{
+    display: grid;
+    grid-template-columns:100% ;
+    .img1{
+      img{
+        border-radius: 0;
+        width: 47vw;
+      }
+    }
+    .valid{
+      margin: 5%;
+      padding: 15%;
+      height: 30vw;
+      p{
+        font-size: 4.5vw;
+      }
+    }
+    #v1,#v2,#v3{
+      margin-left: 5%;
+      padding: 2%;
+    }
+    #v3{
+      height: 60vw;
+    }
+  }
+  .download{
+    text-align: center;
+    p{
+      font-size: 9vw;
+    }
+  }
+  #end{
+    height: 25vw;
+    width: 20%;
+  }
+  .titulo{
+    h1{
+      font-size: 20vw;
+    }
+  }
+}

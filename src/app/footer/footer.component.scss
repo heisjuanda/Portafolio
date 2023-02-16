@@ -1,0 +1,65 @@
+  footer {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+    table {
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Roboto', sans-serif;
+      tbody {
+        td {
+          tr {
+            h1 {
+              font-size: 3.5vw;
+              margin: 5%;
+              text-align: start;
+              transition: 0.5s;
+              color: white;
+            }
+            h1:hover {
+              text-indent: 5%;
+              color: bisque;
+            }
+            a {
+              text-decoration: none;
+              color: white;
+            }
+            p {
+              text-align: start;
+              font-size: 1.5vw;
+              transition: 0.5s;
+              color: white;
+              font-family: "Clarkson", Helvetica, sans-serif;
+            }
+            p:hover {
+              margin-left: 10%;
+              color: beige;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    footer {
+      table {
+        tbody {
+          td {
+            tr {
+              h1 {
+                font-size: 5vw;
+                margin: 5%;
+                text-align: center;
+              }
+              p {
+                font-size: 2.5vw;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

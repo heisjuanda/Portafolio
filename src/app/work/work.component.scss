@@ -1,0 +1,128 @@
+.work{
+  background-color: black;
+  background-image: url("/assets/Img/workFondo.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 2%;
+  font-family: 'Roboto', sans-serif;
+}
+.titulo{
+  h1{
+    color: white;
+    font-size: 12vw;
+    text-align: end;
+  }
+  margin-right: 5%;
+}
+.tabla{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 50% 50%;
+  gap: 7%;
+  img{grid-area: img;}
+  h1{grid-area: title;}
+  a{grid-area: link;}
+  div{
+    display: grid;
+    grid-template-areas:
+    'img '
+    'title '
+    'link '
+    ;
+    width: 60%;
+    .logo1,.logo2,.logo3,.logo4{
+      background-color: rgba(0, 0, 0, 0.589);
+      width: 100%;
+      border-top-left-radius: 2vw;
+      border-top-right-radius: 2vw;
+      img{
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 15vw;
+        height: auto;
+      }
+    }
+    .logo2{
+      img{width: 22vw;}
+    }
+    .texto1,.texto2,.texto3,.texto4{
+      width: 100%;
+      text-align: center;
+      background-color: black;
+      border-bottom-left-radius: 2vw;
+      border-bottom-right-radius: 2vw;
+      h1{
+        font-size: 4vw;
+        transition: 0.3s;
+        color: whitesmoke;
+      }
+      a{
+        text-decoration: none;
+        color: whitesmoke;
+        opacity: 0.6;
+        transition: 0.5s;
+        p{
+          font-size: 2vw;
+        }
+      }
+      a:hover{
+        opacity: 1;
+      }
+    }
+  }
+  margin-bottom: 10%;
+  margin-left: 15%;
+}
+@keyframes opacityy {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+@media screen and (max-width:868px) {
+  .work{
+    background-color: black;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .titulo{
+    h1{
+      font-size: 16vw;
+    }
+  }
+  .tabla{
+    grid-template-columns: 100%;
+    margin-left: 30%;
+    div{
+      width: 55%;
+      .logo1,.logo3,.logo4{
+        img{
+          width: 25vw;
+        }
+      }
+      .logo2{
+        img{width: 30vw;}
+      }
+      .texto1,.texto2,.texto3,.texto4{
+        h1{
+          font-size: 6vw;
+        }
+        a{
+          p{
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+    margin-bottom: 60%;
+  }
+}
+@media screen and (max-width:668px) {
+  .titulo{
+    h1{
+      font-size: 18vw;
+    }
+  }
+}

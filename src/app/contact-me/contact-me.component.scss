@@ -1,0 +1,235 @@
+.todo{
+  background-color: black;
+  background-image: url("/assets/Img/contactMeFondoPc.webp");
+  background-attachment: fixed;
+  background-size: cover;
+}
+.titulo{
+  h1{
+    margin-top: 0;
+    font-size: 12vw;
+    text-align: start;
+    font-family: 'Roboto', sans-serif;
+  }
+  color: white;
+}
+.reachMe{
+  margin-top: 10%;
+  width: 80%;
+  h2{
+    font-size: 5vw;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+.social{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto;
+  width: 60%;
+  margin-left: 22vw;
+}
+.emailMe{
+  p{
+    font-size: 4.5vw;
+    text-align: center;
+    color: white;
+  }
+}
+form{
+  .etiquetas1{grid-area: emailLabel;}
+  .entrada1{grid-area: emailInput;}
+  .etiquetas2{grid-area: subjectLabel;}
+  .entrada2{grid-area: subjectInput;}
+  .etiquetas3{grid-area: messageLabel;}
+  .entrada3{grid-area: messageInput;}
+  .enviar{grid-area: enviar;}
+  .formulario{
+    display: grid;
+    grid-template-areas:
+    'emailLabel'
+    'emailInput'
+    'subjectLabel'
+    'subjectInput'
+    'messageLabel'
+    'messageInput'
+    'enviar'
+    ;
+    .etiquetas1,.etiquetas2,.etiquetas3{
+      font-size: 2vw;
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    label{
+      opacity: 0.7;
+      cursor: pointer;
+      transition: 0.5s;
+      p{
+        color: white;
+      }
+    }
+    label:hover{
+      letter-spacing: 0.3vw;
+      opacity: 1;
+    }
+    .entrada1,.entrada2,.entrada3{
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+      input{
+        opacity: 0.5;
+        font-size: 2vw;
+        font-size: 2vw;
+        font-family: "Clarkson",Helvetica,sans-serif;
+        width: 40vw;
+        height: 3vw;
+        background-color: transparent;
+        color: white;
+        border: none;
+        border-bottom: 0.2vw solid white;
+        flex-grow: 1;
+        outline: none;
+      }
+      textarea{
+        opacity: 0.5;
+        font-size: 2vw;
+        font-family: "Clarkson",Helvetica,sans-serif;
+        width: 40vw;
+        height: 6vw;
+        text-align: start;
+        resize: none;
+        background-color: transparent;
+        border: none;
+        border-bottom: 0.2vw solid white;
+        color: white;
+        flex-grow: 1;
+        outline: none;
+      }
+      input:focus,textarea:focus{
+        opacity: 1;
+      }
+    }
+    .enviar{
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+      button{
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        p{
+          font-size: 3vw;
+          color: white;
+          transition: 0.5s;
+          opacity: 0.6;
+          font-family: 'Roboto',sans-serif;
+        }
+        p:hover{
+          letter-spacing: 0.4vw;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+input:invalid,textarea:invalid{
+  animation: shake 0.3s linear forwards;
+}
+
+.sendForm{
+  transform: translateY(-5vw);
+  border: 1px solid transparent;
+  opacity: 0.7;
+  p{
+    text-align: center;
+    opacity: 1;
+    font-size: 4vw;
+    animation: opacityy 0.5s linear forwards;
+    color: white;
+  }
+}
+
+@keyframes opacityy {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%{
+    transform: translateX(0vw);
+  }20%{
+    transform: translateX(3vw);
+  }50%{
+    transform: translateX(0vw);
+  }75%{
+    transform: translateX(-3vw);
+  }100%{
+    transform: translateX(0vw);
+  }
+}
+
+@media screen and (max-width:780px) {
+
+  .todo{
+    background-color: #ffffff;
+    background-image: url("/assets/Img/contactMeFondoMobile.webp");
+    background-attachment: scroll;
+    background-size: cover;
+
+  }
+
+  .titulo{
+    h1{
+      font-size: 15vw;
+    }
+  }
+  .social{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: auto;
+    width: 80%;
+    margin-left: 14vw;
+  }
+  .emailMe{
+    p{font-size: 10vw;}
+  }
+  form{
+
+    .formulario{
+      .etiquetas1,.etiquetas2,.etiquetas3{
+        font-size: 6vw;
+      }
+      .entrada1,.entrada2,.entrada3{
+        input{
+          font-size: 4vw;
+          width: 60vw;
+          height: 7vw;
+        }
+        textarea{
+          font-size: 4vw;
+          width: 65vw;
+          height: 10vw;
+        }
+      }
+      .enviar{
+        button{
+          p{
+            font-size: 7vw;
+          }
+        }
+      }
+    }
+  }
+
+  .sendForm{
+    p{
+      font-size: 5vw;
+    }
+  }
+}

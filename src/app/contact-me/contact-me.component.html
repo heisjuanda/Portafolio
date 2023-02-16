@@ -1,0 +1,89 @@
+<section class="todo" id="inciar">
+  <header class="titulo">
+    <h1 id="contactMe">
+      Contact <br> Me
+    </h1>
+  </header>
+  <article>
+    <nav class="social">
+      <div>
+        <a href="https://www.instagram.com/heisjuanda/" target="_blank">
+          <ng-lottie  width="70%" height="70%" id="lottieContactAnimations"
+            containerClass="moving-box another-class" [options]="instagram"
+            (animationCreated)="animationCreated($event,0)"></ng-lottie>
+        </a>
+      </div>
+      <div>
+        <a href="https://www.linkedin.com/in/juan-david-moreno-883a46233/" target="_blank">
+          <ng-lottie width="70%" height="70%"
+            containerClass="moving-box another-class" [options]="linkedIn"
+            (animationCreated)="animationCreated($event,1)"></ng-lottie>
+        </a>
+      </div>
+      <div>
+        <a href="https://www.facebook.com/jdma253" target="_blank">
+          <ng-lottie width="70%" height="70%"
+            containerClass="moving-box another-class" [options]="facebook"
+            (animationCreated)="animationCreated($event,3)"></ng-lottie>
+        </a>
+      </div>
+    </nav>
+    <div class="emailMe" id="terminar">
+      <p>Say hello!</p>
+    </div>
+    <form class="formulario" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+      <div class="formulario">
+        <div class="etiquetas1">
+          <label for="email">
+            <p>
+              <i>
+                Email
+              </i>
+            </p>
+          </label>
+        </div>
+        <div class="entrada1">
+          <input autocomplete="off" required [ngModelOptions]="{standalone: true}" [(ngModel)]="email" type="email"
+            id="email" placeholder="youremail@something.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        </div>
+        <div class="etiquetas2">
+          <label for="Subject">
+            <p>
+              <i>
+                Name
+              </i>
+            </p>
+          </label>
+        </div>
+        <div class="entrada2">
+          <input autocomplete="off" required [ngModelOptions]="{standalone: true}" [(ngModel)]="name" type="text"
+            id="Subject" placeholder="First Name Last Name">
+        </div>
+        <div class="etiquetas3">
+          <label for="message">
+            <p>
+              <i>
+                Message
+              </i>
+            </p>
+          </label>
+        </div>
+        <div class="entrada3">
+          <textarea placeholder="I need a front-end programmer like you for my business" required
+            [ngModelOptions]="{standalone: true}" [(ngModel)]="message" id="message" resize="false"></textarea>
+        </div>
+        <div class="enviar">
+          <button>
+            <p>
+              Send!
+            </p>
+          </button>
+        </div>
+      </div>
+    </form>
+    <div class="sendForm" id="sendForm">
+      <p *ngIf="goodData" id="good">I'll read the email!</p>
+      <p *ngIf="badData" id="again">Ups! something went wrong</p>
+    </div>
+  </article>
+</section>

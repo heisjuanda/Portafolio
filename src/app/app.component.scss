@@ -1,0 +1,133 @@
+html,body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+
+  background-color: #000000;
+}
+
+.logo{
+  top: 2vw;
+  right: 2.5vw;
+  position: fixed;
+  z-index: 1;
+  transition: 0.3s;
+  h3{
+    cursor: pointer;
+    font-size: 2.5vw;
+    line-height: 0%;
+    transition: 0.3s;
+    span{
+      visibility: hidden;
+    }
+  }
+  a{
+    color: lightgray;
+    text-decoration: none;
+  }
+}
+.logo:hover{
+  h3{
+    transform: translateX(0.7vw);
+    visibility: hidden;
+    a{
+      visibility: hidden;
+      span{
+        visibility: visible;
+      }
+    }
+  }
+}
+.mainHeader{
+  height: 7vw;
+  position: relative;
+  header{
+    width: 20%;
+    margin-left: 5%;
+    h1{
+      cursor: not-allowed;
+      color: white;
+      font-size: 3vw;
+      height: 1vw;
+      opacity: 0.5;
+    }
+
+    @keyframes shadows {
+      0%{
+        text-shadow: 0vw 0vw 0vw white;
+      }25%{
+        text-shadow: 0vw 0vw 0vw white,
+        0.2vw 0.2vw 0vw lightblue;
+      }50%{
+        text-shadow: 0vw 0vw 0vw white,
+        0.2vw 0.2vw 0vw lightblue,
+        0.4vw 0.4vw 0vw lightcyan;
+      }75%{
+        text-shadow: 0vw 0vw 0vw white,
+        0.2vw 0.2vw 0vw lightblue,
+        0.4vw 0.4vw 0vw lightcyan,
+        0.6vw 0.6vw 0vw lightskyblue;
+      }100%{
+        text-shadow: 0vw 0vw 0vw white,
+        0.2vw 0.2vw 0vw lightblue,
+        0.4vw 0.4vw 0vw lightcyan,
+        0.6vw 0.6vw 0vw lightskyblue,
+        0.8vw 0.8vw 0vw lightsteelblue;
+      }
+    }
+  }
+  article{
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    margin-left: 35%;
+    transform: translateY(-5vw);
+    div{
+      width: 56%;
+      a{
+        text-decoration: none;
+        color: white;
+        p{
+          opacity: 0.5;
+          font-size: 2vw;
+          transition: 0.3s;
+        }
+        p:hover{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:600px) {
+  .logo{
+    top: 2vw;
+    right: 2.5vw;
+    h3{
+      font-size: 4vw;
+    }
+  }
+  .mainHeader{
+    height: 9vw;
+    header{
+      width: 25%;
+      margin-left: 5%;
+      h1{
+        font-size: 4vw;
+        height: 1vw;
+      }
+    }
+    article{
+      margin-left: 35%;
+      transform: translateY(-6vw);
+      div{
+        width: 56%;
+        a{
+          p{
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+  }
+}
